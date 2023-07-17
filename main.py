@@ -1,12 +1,20 @@
-import json
+# ЗАВДАННЯ 1
 
-if __name__ == '__main__':
-    with open("products.json", "r", encoding="utf-8") as file:
-        products = json.load(file)
-        print(products)
+# Вивести на екран усі прості числа в діапазоні, зазначеному користувачем.
+# Число називається простим, якщо воно ділиться без залишку тільки на себе та на одиницю.
+# Наприклад, три — це просте число, а чотири — ні.
 
-        temp_arr = []
-        for item in products:
-            if title[0].upper() == "F":
-                temp_arr.append(item)
+start = int(input("Введіть початкове число діапазону: "))
+end = int(input("Введіть кінцеве число діапазону: "))
 
+
+def getNumbers(start, end):
+
+
+i = 2
+while i < getNumbers():
+    if getNumbers() % i == 0:
+        simple = False
+    i += 1
+if simple:
+    print("Прості числа у заданому діапазоні:")
