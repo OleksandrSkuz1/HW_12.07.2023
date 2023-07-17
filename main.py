@@ -1,11 +1,12 @@
+import json
+
 if __name__ == '__main__':
-    start = int(input("Введіть початкове число діапазону: "))
-    end = int(input("Введіть кінцеве число діапазону: "))
+    with open("products.json", "r", encoding="utf-8") as file:
+        products = json.load(file)
+        print(products)
 
-    numbers = [start, end]
-    i = 2
-    for i in range(start, end + 1):
-        if i > 2:
-         elif i % i == 0:
+        temp_arr = []
+        for item in products:
+            if title[0].upper() == "F":
+                temp_arr.append(item)
 
-            print("Прості числа у заданому діапазоні:", i)
