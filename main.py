@@ -4,17 +4,19 @@
 # Число називається простим, якщо воно ділиться без залишку тільки на себе та на одиницю.
 # Наприклад, три — це просте число, а чотири — ні.
 
-start = int(input("Введіть початкове число діапазону: "))
-end = int(input("Введіть кінцеве число діапазону: "))
 
+x = int(input("Введіть початкове число діапазону: "))
+y = int(input("Введіть кінцеве число діапазону: "))
 
-def getNumbers(start, end):
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
+for num in range(x, y + 1):
+    if is_prime(num):
+        print(num)
 
-i = 2
-while i < getNumbers():
-    if getNumbers() % i == 0:
-        simple = False
-    i += 1
-if simple:
-    print("Прості числа у заданому діапазоні:")
